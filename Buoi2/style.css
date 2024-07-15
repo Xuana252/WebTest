@@ -2,59 +2,66 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #5ecda8;
+    background-color: #2fc08f;
     height: 100vh;
 }
 .container {
     display: flex;
-    width: 500px;
-    height: 600px;
-    padding: 70px 60px ;
+    width: 350px;
+    height: 400px;
+    padding: 80px 60px ;
     flex-direction: column;
     background-color:rgb(255, 255, 255);
     box-shadow: 15px 15px rgba(0, 0, 0, 0.194);
 }
 html {
     font-family: Arial, Helvetica, sans-serif;
+    
+}
+::selection {
+    background-color: rgb(100, 100, 100);
+    color:white;
+    text-decoration: none;
 }
 button {
     border: none;
     width: 100%;
-    height: 60px;
+    min-height: 40px;
     color: white;
     background-color: #5ecda8 ;
     padding: 10px;
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: bold;
     margin: 20px 0
 }
 h1 {
     margin: 0px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 p {
-    opacity: 50%;
-    font-size: 1.5em;
+    color: rgb(168, 168, 168);
+    font-size: 1.3em;
 }
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(168, 168, 168);
 }
 .inputbox {
     display: flex;
-    height: 60px;
+    min-height: 40px;
     margin: 0px 0px 20px 0px;
     background-color: gray;
 }
 .iconbox {
     display: inline-block;
     height: 100%;
-    width: 60px;
-    font-size: 1.8em;
+    aspect-ratio: 1/1;
     color: white;
     text-align: center;
     align-content: center;
     background-color: #5ecda8;
+    user-select: none;
+    font-size: 1.3em;
     
 }
 input {
@@ -62,17 +69,31 @@ input {
     background-color: rgb(240, 238, 238);
     border: none;
     flex: 1;
-    font-size: 1.5em;
+    font-size: 1.3em;
+}
+input::selection {
+    background-color: rgb(100, 100, 100);
+    color:white;
+    text-decoration: none;
 }
 input:focus {
     border: none;
     outline: none;
 }
-.inputprefix {
-    font-size: 1em;
+.inputlabel {
+    font-size: 0.7em;
     text-align: left;
 }
 #registerText {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 0.8em;
+}
+a:hover{
+    font-weight: bold;
+}
+button:hover {
+    background-color: #84e5c5;
+}
+button:active {
+    background-color: #51b091;
 }
