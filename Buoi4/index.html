@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BaiTapBuoi4</title>
+</head>
+<body>
+    <h1>TO DO LIST</h1>
+    <button id="SaveButton">⬇</button>
+    <div id="Instructions">
+        ✎ tạo task mới 
+        <br>
+        🗑️ xóa category 
+        <br>
+        ❗thay đổi status chỉ việc bấm vào task
+        <br>
+        🔴: Pending 
+        <br>
+        🟡: In-Progress 
+        <br>
+        🟢: Completed
+
+    </div>
+    <form id="TaskForm">
+        <input id="TextBox" type="text">
+        <button id="SubmitButton">Add Category</button>
+        <div id="ColorPicker">
+            <ul id="ColorList">
+                <button class="ColorButton" id="Red"></button>
+                <button class="ColorButton" id="Orange"></button>
+                <button class="ColorButton" id="Yellow"></button>
+                <button class="ColorButton" id="Green"></button>
+                <button class="ColorButton" id="Blue"></button>
+                <button class="ColorButton" id="Purple"></button>
+            </ul>
+        </div>
+    </form>
+    
+    <ul id="CategoriesList">
+        <!-- <li>
+            <div class="CategoriesName">
+                <p class="Name">Homework</p>
+                <div class="ButtonContainer">
+                    <button class="AddButton">✎</button>
+                    <button class="RemoveButton">🗑️</button>
+                </div>
+                <input id="TaskInput" type="text">
+                
+            </div>
+            <div class="TasksListContainer">
+                <ul class="TasksList">
+                    <li class="Pending">
+                        <button class="RemoveTaskButton">✖</button>
+                        <p class="Content"> Do something </p>
+                       
+                       
+                    </li>
+                    <li class="In-Progress">
+                        <button class="RemoveTaskButton">✖</button>
+                        <p class="Content"> Do something sakdjasdklasjdlkajskdljaslkdjakljkdljsa</p>
+                        
+                    </li>
+                    <li class="Completed">
+                        <button class="RemoveTaskButton">✖</button>
+                        <p class="Content"> Do something </p>
+                       
+                    </li>
+                </ul>
+            </div>
+        </li> -->
+    </ul>
+    <script src = "script.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    user-select: none;
+}
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: lightcyan ;
+}
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+   
+}
+li {
+    transition: transform 1s ease;
+}
+
+#SaveButton {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: 46px;
+    aspect-ratio: 1/1;
+    text-align: center;
+    align-content: center;
+    border:none;
+    border-radius: 50%;
+    background-color: lightblue;
+    font-size: 1.8em;
+    color: white;
+}
+
+#SaveButton:hover{
+    background-color: lightskyblue;
+}
+#SaveButton:active{
+    background-color: lightseagreen;
+}
+#TaskInput {
+    display: none;
+    border:none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1.2em;
+    font-style: italic;
+}
+#TaskInput:focus {
+    outline: none;
+}
+#TaskForm {
+    display: flex;
+    gap: 20px;
+    margin: 10px auto;
+    height: 50px;
+}
+#TextBox {
+    border:none;
+    padding: 0px 10px;
+    font-size: 1.2em;
+    border-radius: 20px;
+}
+#TextBox:focus{
+    outline: none;
+}
+#SubmitButton {
+    color: white;
+    background-color: lightblue;    
+    border: none;
+    font-size: 1.1em;
+    border-radius: 10px;
+    padding: 10px;
+    height: 50px;
+}
+#SubmitButton:hover {
+    background-color: lightskyblue;
+}
+#SubmitButton:active{
+    background-color: lightseagreen;
+}
+.AddButton,.RemoveButton {
+    float: right;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    color: lightslategray;
+    grid-row: 1;
+}
+#CategoriesList {
+    display: flex;
+    border: none;
+    border-radius: 30px;
+    width: 95%;
+    height: auto;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.165);
+    padding: 20px;
+}
+#CategoriesList > li {
+   
+    border-radius: 20px;
+    width: 405.5px;
+    min-height: 400px;
+    height: fit-content;
+    margin: 10px;
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: 100%; /* Single column */
+    grid-template-rows: auto auto; /* Two rows, first row auto-sized, second row auto-sized */
+    gap: 10px; /* Gap between grid items */
+    justify-content: space-around;
+    font-size: 1.2em;
+    background-color: bisque;
+    animation: slideUp 0.5s ease-in-out;
+}
+.ButtonContainer {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+.CategoriesName {
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50.5px;
+}
+.Name {
+    margin: 5px 0px;
+    text-wrap:wrap;
+    word-wrap: break-word;
+    width: 300px;
+}
+.TasksListContainer {
+    background-color: lightyellow ;
+    border-radius: 10px;
+    padding: 5px 10px;
+    min-height: 400px;
+    height: fit-content;
+    font-weight: lighter;
+}
+.TasksList { 
+    overflow-y: hidden;
+    padding: 5px 0px;
+    font-size: 0.8em;
+    font-style: italic;
+    list-style-type: none;
+}
+.TasksList > li {
+    margin: 5px 0px;
+    border-radius: 20px;
+    border: 1px solid gainsboro;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    animation: slideIn 0.5s ease-in;
+
+   
+}
+.Content {
+    margin: 0px;
+    text-wrap:wrap;
+    word-wrap: break-word;
+    width: 365px;
+    user-select: none;
+}
+.Pending {
+    background-color: rgb(255, 182, 182);
+}
+.In-Progress {
+    background-color: rgb(255, 255, 92);
+}
+.Completed {
+    background-color: lightgreen;
+}
+.RemoveTaskButton {
+    justify-self: end;
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    height: fit-content;
+    user-select: none;
+}
+#ColorPicker {
+    display: none;
+
+    background-color: white;
+    border-radius: 20px;
+    max-height: 44px;
+    padding:10px;
+}
+#ColorList {
+    display: flex;
+    padding: 0px;
+    gap: 10px;
+    margin:  0px auto;
+}
+#ColorList > button{
+    list-style-type: none;
+    border: none;
+    min-width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+#Red{
+    background-color: rgb(249, 123, 109);
+}
+#Orange {
+    background-color: rgb(255, 186, 95);
+}
+#Blue{
+    background-color: lightblue;
+}
+#Yellow{
+    background-color: rgb(255, 255, 154);
+}
+#Green{
+    background-color: rgb(192, 255, 190);
+}
+#Purple {
+    background-color: rgb(255, 190, 230);
+}
+
+#Instructions {
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: left;
+    align-content: top;
+    position: absolute;
+    top: 10px;
+    right: 35px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.165);
+}
+@keyframes slideUp {
+    from {
+        opacity: 20%;
+        transform: translateY(30px);
+    }
+}
+@keyframes popUp {
+    from {
+        transform: scale(0);
+        opacity: 40%;
+    }
+}
+@keyframes popOut {
+    to {
+        transform: scale(0);
+        opacity: 40%;
+    }
+}
+@keyframes deleted {
+    to { 
+        opacity: 0%;
+        transform: scale(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0%;
+        transform: translateX(-30px);
+    }
+}
+@keyframes slideOut {
+    to {
+        opacity: 0%;
+        transform: translateX(-30px);
+    }
+}

@@ -20,34 +20,29 @@ console.log("Trung binh cac phan tu trong mang = " + sum / 5);
 
 console.log("Bai 3");
 
-function kiemTra(text)
-{
-    let reversed = [...text].reverse()
-    for (let i=0;i<text.length;i++)
-    {
-        if(text[i] != reversed[i])
-            return false
-    }
-    return true
+function kiemTra(text) {
+  let reversed = [...text].reverse();
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] != reversed[i]) return false;
+  }
+  return true;
 }
 
-console.log('Ket qua cua "racecar": ' + kiemTra('racecar').toString())
-console.log('Ket qua cua "khong phai": ' + kiemTra('khong phai').toString())
+console.log('Ket qua cua "racecar": ' + kiemTra("racecar").toString());
+console.log('Ket qua cua "khong phai": ' + kiemTra("khong phai").toString());
 
 console.log("Bai 4");
 
 let hocSinh = {
-    name: 'Le Nguyen Dong Xuan',
-    age: 20,
-    grade: 7.5,
+  name: "Le Nguyen Dong Xuan",
+  age: 20,
+  grade: 7.5,
+};
+
+function printinfo(hocSinh) {
+  for (let key in hocSinh) {
+    console.log(`${key} : ${hocSinh[key]}\n`);
+  }
 }
 
-function printinfo(hocSinh)
-{
-    for (let key in hocSinh)
-    {
-        console.log(`${key} : ${hocSinh[key]}\n`)
-    }
-}
-
-printinfo(hocSinh)
+printinfo(hocSinh);
