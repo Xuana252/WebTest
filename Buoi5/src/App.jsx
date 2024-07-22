@@ -72,6 +72,9 @@ function App() {
       );
       localStorage.setItem("lastId", JSON.stringify(nextCategoryId));
     }
+    else {
+      alert("Tồn tại category cùng tên!!!")
+    }
   };
 
   const saveChange = () => {
