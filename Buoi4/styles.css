@@ -4,6 +4,7 @@ html {
     user-select: none;
 }
 body {
+    margin: 0px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -94,7 +95,7 @@ li {
     border: none;
     border-radius: 30px;
     width: 95%;
-    height: auto;
+    height: 100vh;
     flex-wrap: wrap;
     background-color: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.165);
@@ -227,8 +228,8 @@ li {
 }
 
 #Instructions {
-    width: 200px;
-    height: 200px;
+    width: 190px;
+    height: 190px;
     background-color: antiquewhite;
     padding: 10px;
     border-radius: 30px;

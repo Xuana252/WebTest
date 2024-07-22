@@ -1,0 +1,70 @@
+#InputForm {
+  display: flex;
+  gap: 20px;
+  margin: 10px auto;
+  height: 50px;
+}
+#TextBox {
+  border: none;
+  padding: 0px 10px;
+  font-size: 1.2em;
+  border-radius: 20px;
+}
+#TextBox:focus {
+  outline: none;
+}
+
+#SubmitButton {
+  color: white;
+  background-color: lightblue;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 10px;
+  padding: 10px;
+  height: 50px;
+}
+
+#SubmitButton:hover {
+  background-color: lightskyblue;
+}
+#SubmitButton:active {
+  background-color: lightseagreen;
+}
+
+#ColorPicker {
+  background-color: white;
+  border-radius: 20px;
+  max-height: 44px;
+  padding: 10px;
+}
+#ColorList {
+  display: flex;
+  padding: 0px;
+  gap: 10px;
+  margin: 0px auto;
+}
+#ColorList > button {
+  list-style-type: none;
+  border: none;
+  min-width: 30px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+#Red {
+  background-color: rgb(249, 123, 109);
+}
+#Orange {
+  background-color: rgb(255, 186, 95);
+}
+#Blue {
+  background-color: lightblue;
+}
+#Yellow {
+  background-color: rgb(255, 255, 154);
+}
+#Green {
+  background-color: rgb(192, 255, 190);
+}
+#Purple {
+  background-color: rgb(255, 190, 230);
+}
