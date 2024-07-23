@@ -51,7 +51,7 @@ const InputForm = ({onAdd}) => {
         type="text"
         value={textValue}
         onChange={handleTextChange}
-        
+        placeholder="Category name"
         readOnly={isVisible}
       />
 

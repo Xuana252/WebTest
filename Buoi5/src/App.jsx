@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
-import "./components/Instructions";
 import "./App.css";
 import Instructions from "./components/Instructions.jsx";
 import InputForm from "./components/InputForm.jsx";
 import CategoriesList from "./components/CategoriesList.jsx";
+import SearchBar from "./components/SearchBar.jsx"
+
 
 function App() {
   const [categories, setCategories] = useState([]);
   const [lastCateId, setLastCateId] = useState(1);
+  const [instructionVisibility,setInstructionVisibility] = useState(false);
+  const [searchText,setSearchText] = useState('');
 
   useEffect(() => {
     const storedCategories = JSON.parse(localStorage.getItem("Categories"));
@@ -23,6 +26,10 @@ function App() {
     setLastCateId(newCateId);
     return lastCateId;
   };
+
+  const handleTextChange = (searchText) => {
+    setSearchText(searchText)
+  }
 
   const handleTasksChange = (
     cateIdToAddTaskTo,
@@ -85,16 +92,29 @@ function App() {
   return (
     <>
       <h1>TO DO LIST</h1>
-      <button id="SaveButton" onClick={saveChange}>
-        💾 Manual save
-      </button>
-      <Instructions />
+      <div id="Floater">
+        <div id="FirstRow">
+          <button className="Button" onClick={saveChange}>
+          Save 
+          </button>
+          <button className="Button" onClick={()=>setInstructionVisibility(!instructionVisibility)}>
+          Instructions
+          </button>
+          <SearchBar onChange={handleTextChange}/>
+          
+        </div>
+        {instructionVisibility&&<Instructions />}
+      </div>
+      
+      
+     
       <InputForm onAdd={handleAddCategory} />
 
       <CategoriesList
         categoriesList={categories}
         onDelete={handleDeleteCategory}
         onTasksChange={handleTasksChange}
+        filterText = {searchText}
       />
     </>
   );

@@ -13,7 +13,9 @@
 #TextBox:focus {
   outline: none;
 }
-
+#TextBox::placeholder {
+  opacity: 40%;
+}
 #SubmitButton {
   color: white;
   background-color: lightblue;

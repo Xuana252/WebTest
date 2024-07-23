@@ -4,6 +4,7 @@
   border: none;
   border-radius: 30px;
   width: 95vw;
+  margin: 0px 10px;
   min-height: 530px;
   height: auto;
   flex-wrap: wrap;

@@ -15,7 +15,7 @@ const Task = ({ taskId, onDelete, content, initState, onStateChange }) => {
     setDelete(true);
     setTimeout(() => {
         onDelete(taskId);
-      }, 400); // 500ms delay, adjust as needed
+      }, 400);
   };
   return (
     <li
