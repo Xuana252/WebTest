@@ -1,13 +1,13 @@
 .Task {
   margin: 5px 0px;
   border-radius: 20px;
-  border: 1px solid gainsboro;
   padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 5px;
   animation: slideIn 0.5s ease-in;
   transition: 0.2s ease;
+  box-shadow: -2px 2px 2px lightgray;
 }
 .Content {
   margin: 0px;
@@ -44,10 +44,16 @@
 .RemoveTaskButton {
     align-self: flex-end;
     background-color: transparent;
-    border: 1px solid grey;
-    font-size: 0.8em;
-    height: fit-content;
+    text-align: center;
+    border: none;
+    font-size: 1em;
+    height: 30px;
+    aspect-ratio: 1/1;
+    line-height: 30px;
+    color: gray;
     user-select: none;
-    background-color: white;
+    background-color: lightyellow;
     border-radius: 50%;
+    box-shadow:inset -2px 2px 2px lightgray;
+
 }

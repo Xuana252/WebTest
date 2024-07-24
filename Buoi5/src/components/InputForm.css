@@ -1,14 +1,19 @@
 #InputForm {
   display: flex;
   gap: 20px;
-  margin: 10px auto;
+  margin: 0px 10px;
+  padding: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   height: 50px;
+  background-color: white;
 }
 #TextBox {
   border: none;
   padding: 0px 10px;
   font-size: 1.2em;
   border-radius: 20px;
+  box-shadow: inset -2px 2px 2px rgba(0, 0, 0, 0.2); /* Inset box shadow for the inset effect */
 }
 #TextBox:focus {
   outline: none;
@@ -21,16 +26,17 @@
   background-color: lightblue;
   border: none;
   font-size: 1.1em;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 10px;
   height: 50px;
+  box-shadow: -1px 1px 2px lightgray;
 }
 
 #SubmitButton:hover {
   background-color: lightskyblue;
 }
 #SubmitButton:active {
-  background-color: lightseagreen;
+  box-shadow: inset -2px 2px 5px rgba(0, 0, 0, 0.422);
 }
 
 #ColorPicker {

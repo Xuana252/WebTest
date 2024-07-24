@@ -91,11 +91,11 @@ function App() {
   };
   return (
     <>
-      <h1>TO DO LIST</h1>
+      <h1>To Do List</h1>
       <div id="Floater">
         <div id="FirstRow">
           <button className="Button" onClick={saveChange}>
-          Save 
+          Save
           </button>
           <button className="Button" onClick={()=>setInstructionVisibility(!instructionVisibility)}>
           Instructions
