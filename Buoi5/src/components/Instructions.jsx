@@ -1,24 +1,23 @@
-import "./Instructions.css"
+import "./Instructions.css";
 
 export default function Instructions() {
-    return (
-      <div id="Instructions">
-        
-      ✎ tạo task mới 
+  return (
+    <div id="Instructions">
+      ✎ tạo task mới
       <br />
-      ▼ xem chi tiết 
+      ▼ xem chi tiết
       <br />
-      🗑️ xóa category 
+      🗑️ xóa category
       <br />
       ❗thay đổi status chỉ việc bấm vào task
       <br />
-      🔴: Pending 
+      🔴: Pending
       <br />
-      🟡: In-Progress 
+      🟡: In-Progress
       <br />
       🟢: Completed
       <br />
       💾 autosave mỗi lần tạo,xóa category hoặc task,thay đổi trạng thái
     </div>
-    )
+  );
 }
