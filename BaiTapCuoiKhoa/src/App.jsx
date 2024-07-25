@@ -2,15 +2,15 @@ import { useState } from "react";
 import Gallery from "./components/Gallery";
 import CategoriesBox from "./components/CategoriesBox";
 import SearchBar from "./components/SearchBar";
-import image1 from "./assets/Photos/DogEatSausageInSpace.png"
-import image2 from "./assets/Photos/Kitchen.png"
-import image3 from "./assets/Photos/Lion.png"
-import image4 from "./assets/Photos/FamilyVacation.png"
-import image5 from "./assets/Photos/Nature.png"
-import image6 from "./assets/Photos/Books.png"
-import image7 from "./assets/Photos/Dog.png"
-import image8 from "./assets/Photos/LightHouse.png"
-import image9 from "./assets/Photos/Pizza.png"
+import image1 from "./assets/Photos/DogEatSausageInSpace.jpg"
+import image2 from "./assets/Photos/Kitchen.jpg"
+import image3 from "./assets/Photos/Lion.jpg"
+import image4 from "./assets/Photos/FamilyVacation.jpg"
+import image5 from "./assets/Photos/Nature.jpg"
+import image6 from "./assets/Photos/Books.jpg"
+import image7 from "./assets/Photos/Dog.jpg"
+import image8 from "./assets/Photos/LightHouse.jpg"
+import image9 from "./assets/Photos/Pizza.jpg"
 
 
 function App() {
