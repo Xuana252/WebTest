@@ -16,22 +16,22 @@ export default {
         'minCate': '80px',
       },
       height: {
-        'catebox': 'fit-content',
+        'catebox': '100%',
         'photo': '240px',
       },
       fontFamily: {
         'title': 'Playwrite BE VLG'
       },
       fontSize: {
-        'title' : '5em',
-        'cate' :'1.5em'
+        'title' : '2em',
+        'cate' :'1em'
       },
       lineHeight: {
         'title' : '2em',
         "hoverPhoto": '100%'
       },
       gridTemplateRows: {
-        'myGrid' : '20% 5% 5% 70%',
+        'AppBar' : 'auto,auto,85%',
       },
       backgroundColor: {
         'hoverPhoto' : 'rgba(0,0,0,0.5)',
