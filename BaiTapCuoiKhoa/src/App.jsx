@@ -65,6 +65,7 @@ function App() {
     { id: 4, name: "Nature", state: false },
     { id: 5, name: "Traveling", state: false },
     { id: 6, name: "Cosmic", state: false },
+   
   ]);
 
   const handleCategoryStateChange = (cateIdToChange) => {

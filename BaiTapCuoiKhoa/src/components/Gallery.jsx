@@ -37,7 +37,7 @@ const Gallery = ({ photos }) => {
 
 
   return (
-    <ul className={`grid ${gridColStyle} gap-x-2 bg-slate-200 min-h-screen min-w-full gap-2 p-5 justify-center absolute top-[15%]`}>
+    <ul className={`grid ${gridColStyle} gap-x-2 bg-slate-200 min-h-screen min-w-full gap-2 p-5 justify-center absolute top-[100px]`}>
        {[...Array(colsNum).keys()].map((columnIndex) => (
         <div key={columnIndex} className="flex flex-col w-full h-fit gap-2 ">
           {photos.map((photo, index) => {

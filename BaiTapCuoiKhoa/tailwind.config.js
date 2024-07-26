@@ -18,12 +18,13 @@ export default {
       height: {
         'catebox': '100%',
         'photo': '240px',
+        'menu': '110px',
       },
       fontFamily: {
         'title': 'Playwrite BE VLG'
       },
       fontSize: {
-        'title' : '2em',
+        'title' : '1.2em',
         'cate' :'1em'
       },
       lineHeight: {
@@ -31,7 +32,6 @@ export default {
         "hoverPhoto": '100%'
       },
       gridTemplateRows: {
-        'AppBar' : 'auto,auto,85%',
       },
       backgroundColor: {
         'hoverPhoto' : 'rgba(0,0,0,0.5)',
