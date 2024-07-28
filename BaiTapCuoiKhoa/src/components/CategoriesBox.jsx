@@ -22,15 +22,21 @@ const CategoriesBox = ({ categories, onCateStateChange }) => {
     setIsDragging(false);
   };
   return (
-    <ul className="pointer-events-auto align-middle bg-white flex px-2 justify-start md:justify-center w-full h-full gap-2 overflow-x-scroll   no-scrollbar align-middle" onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} ref={listRef} onMouseUp={handleMouseUp} >
+    <ul
+      className="pointer-events-auto align-middle bg-background flex px-2 justify-start md:justify-center w-full h-full gap-2 overflow-x-scroll no-scrollbar"
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      ref={listRef}
+    >
       {categories.map((category) => (
         <div
           className={`h-fit w-fit my-2 text-center rounded-full py-1 px-3 text-cate font-bold select-none transition ease-in-out duration-300 ${
             !category.state
-              ? "bg-white border-2 border-black text-black"
-              : "bg-black border-2 border-black text-white"
+              ? "bg-primary border-2 border-accent text-accent"
+              : "bg-accent border-2 border-accent text-primary"
           }`}
-          onClick={()=>onCateStateChange(category.id)}
+          onClick={() => onCateStateChange(category.id)}
         >
           {category.name}
         </div>

@@ -1,5 +1,6 @@
-import { useState } from "react";
-import Gallery from "./components/Gallery";
+import { useEffect, useState, Suspense ,lazy } from "react";
+const Menu = lazy(() => import('./components/Menu'));
+const Gallery = lazy(() => import('./components/Gallery'));
 import image1 from "./assets/Photos/DogEatSausageInSpace.jpg";
 import image2 from "./assets/Photos/Kitchen.jpg";
 import image3 from "./assets/Photos/Lion.jpg";
@@ -9,10 +10,19 @@ import image6 from "./assets/Photos/Books.jpg";
 import image7 from "./assets/Photos/Dog.jpg";
 import image8 from "./assets/Photos/LightHouse.jpg";
 import image9 from "./assets/Photos/Pizza.jpg";
-import Menu from "./components/Menu";
 
 function App() {
   const [searchText, setSearchText] = useState("");
+  const [theme, setTheme] = useState("dark");
+  const themes = [
+    "light",
+    "dark",
+    "theme3",
+    "theme4",
+    "theme5",
+    "theme6",
+    "theme7",
+  ];
   const photos = [
     {
       id: 1,
@@ -65,8 +75,27 @@ function App() {
     { id: 4, name: "Nature", state: false },
     { id: 5, name: "Traveling", state: false },
     { id: 6, name: "Cosmic", state: false },
-   
+    { id: 7, name: "Fashion", state: false },
+    { id: 8, name: "Gaming", state: false },
+    { id: 9, name: "Music", state: false },
+    { id: 10, name: "Arts", state: false },
+    { id: 11, name: "Business", state: false },
   ]);
+
+
+
+  useEffect(() => {
+    
+    const storedTheme = localStorage.getItem("Theme");
+    if (storedTheme !== null) {
+      setTheme(storedTheme);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
 
   const handleCategoryStateChange = (cateIdToChange) => {
     const updatedCategories = categories.map((category) => {
@@ -102,14 +131,24 @@ function App() {
       selectedCate.every((cate) => photo.categories.includes(cate.name))
     );
   });
-  console.log(searchText);
+  const handleThemeChanging = (theme) => {
+    setTheme(theme);
+    localStorage.setItem("Theme", theme);
+  };
 
   return (
-    <div className="h-fit justify-items-center gap-4  bg-slate-400">
+    <Suspense fallback={<></>}>
+    <div className="h-fit gap-4">
       <Gallery photos={filteredPhotos} />
-
-      <Menu categories={categories} onCateStateChange={handleCategoryStateChange} onSearching={handleSearching}/>
+      <Menu
+        categories={categories}
+        onCateStateChange={handleCategoryStateChange}
+        onSearching={handleSearching}
+        onThemeChange={handleThemeChanging}
+        themes={themes}
+      />
     </div>
+  </Suspense>
   );
 }
 

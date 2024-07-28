@@ -3,13 +3,76 @@
 @tailwind utilities;
 
 @layer utilities {
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
-      }
-     /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
-    }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+@layer base {
+  .light {
+    --primary: #ffffff;
+    --secondary: #e0e0e0;
+    --secondary-variant-1: #a6a6a6;
+    --accent: #000000;
+    background-color: var(--primary);
+  }
+  
+  .dark {
+    --primary: #282828;
+    --secondary: #515151;
+    --secondary-variant-1: #6c6c6c;
+    --accent: #d0d0d0;
+    background-color: var(--primary);
+  }
+  .theme3 {
+    --primary: #1a3636;
+    --secondary: #40534c;
+    --secondary-variant-1: #677d6a;
+    --accent: #d6bd98;
+    background-color: var(--primary);
+  }
+  .theme4 {
+    --primary: #522258;
+    --secondary: #8C3061;
+    --secondary-variant-1: #C63C51;
+    --accent: #D95F59;
+    background-color: var(--primary);
+  }
+  .theme5 {
+    --primary: #FFE9D0;
+    --secondary: #FFFED3;
+    --secondary-variant-1: #BBE9FF;
+    --accent: #B1AFFF;
+    background-color: var(--primary);
+  }
+  .theme6 {
+    --primary: #5A639C;
+    --secondary: #7776B3;
+    --secondary-variant-1: #9B86BD;
+    --accent: #E2BBE9;
+    background-color: var(--primary);
+  }
+  .theme7 {
+    --primary: #006769;
+    --secondary: #40A578;
+    --secondary-variant-1: #9DDE8B;
+    --accent: #E6FF94;
+    background-color: var(--primary);
+
+  }
+  ::selection {
+    background-color: var(--accent);
+    color: var(--primary);
+  }
+}
+@font-face {
+  font-family: 'AppLogo';
+  src: url('./assets/Fonts/icomoon.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

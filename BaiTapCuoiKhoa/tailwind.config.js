@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'inner-custom': 'inset 0 5px 2px rgba(0, 0, 0, 0.2)',
+        'inner-custom': 'inset 0 5px 2px var(--secondary-variant-1)',
       },
       width: {
         'catebox': '40%',
@@ -24,17 +24,14 @@ export default {
         'title': 'Playwrite BE VLG'
       },
       fontSize: {
-        'title' : '1.2em',
+        'title' : '1.1em',
         'cate' :'1em'
       },
       lineHeight: {
-        'title' : '2em',
+        'title' : '1.5em',
         "hoverPhoto": '100%'
       },
       gridTemplateRows: {
-      },
-      backgroundColor: {
-        'hoverPhoto' : 'rgba(0,0,0,0.5)',
       },
       
     },
@@ -48,7 +45,22 @@ export default {
     animation: {
       'slide-up-animation': 'slideUp 0.5s ease-out',  
     },
+    colors: {
+      primary: 'var(--primary)',
+      secondary: {
+        1: 'var(--secondary)',
+        2: 'var(--secondary-variant-1)',
+      },
+      accent: 'var(--accent)',
+      black: 'black',
+      transparent: 'transparent',
+      white:'white'
+    },
+    fontFamily: {
+      AppLogo: 'AppLogo'
+    }
   },
   plugins: [],
 }
+
 
