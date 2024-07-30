@@ -31,7 +31,7 @@
   }
   .theme3 {
     --primary: #1a3636;
-    --secondary: #40534c;
+    --secondary: #40534c ;
     --secondary-variant-1: #677d6a;
     --accent: #d6bd98;
     background-color: var(--primary);
@@ -65,11 +65,63 @@
     background-color: var(--primary);
 
   }
+  .theme8{
+    --primary: #402E7A;
+    --secondary: #4C3BCF;
+    --secondary-variant-1: #4B70F5;
+    --accent: #3DC2EC;
+    background-color: var(--primary);
+
+  }
+  .theme9{
+    --primary: #FFF5E0;
+    --secondary: #8DECB4;
+    --secondary-variant-1: #41B06E;
+    --accent: #141E46;
+    background-color: var(--primary);
+  }
+  .theme10{
+    --primary: #C9DABF;
+    --secondary: #9CA986;
+    --secondary-variant-1: #808D7C;
+    --accent: #5F6F65;
+    background-color: var(--primary);
+  }
   ::selection {
     background-color: var(--accent);
     color: var(--primary);
   }
+  .my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex; /* gutter size offset */
+    width: 100%;
+    gap:16px;
+  }
+  .my-masonry-grid_column {
+ /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+  .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+    background: grey;
+    margin-bottom: 16px;
+  }
+  .tooltip {
+    border-radius: 50%;
+    --rt-color-white: var(--accent);
+    --rt-color-dark: var(--secondary-variant-1);
+    --rt-color-success: #8dc572;
+    --rt-color-error: #be6464;
+    --rt-color-warning: #f0ad4e;
+    --rt-color-info: #337ab7;
+    --rt-opacity: 0.9;
+    --rt-transition-show-delay: 0s;
+    --rt-transition-closing-delay: 0s;
+  }
 }
+
 @font-face {
   font-family: 'AppLogo';
   src: url('./assets/Fonts/icomoon.ttf') format('woff2');

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'inner-custom': 'inset 0 5px 2px var(--secondary-variant-1)',
+        'inner-custom': 'inset 3px 3px 0px var(--secondary-variant-1)',
       },
       width: {
         'catebox': '40%',
@@ -40,10 +40,37 @@ export default {
         'from':{
           transform: 'translateY(30px)'
         },
-      }
+      },
+      dropDown: {
+
+        '0%' : {
+          transform: 'scaleY(0)'
+        },
+        '80%' : {
+          transform: 'scaleY(0.8)'
+        },
+        '100%' : {
+          transform: 'scaleY(1)'
+        }
+        
+      },
+      retract: {
+        '0%' : {
+          transform: 'scaleY(1)'
+        },
+        '80%' : {
+          transform: 'scaleY(0.2)'
+        },
+        '100%' : {
+          transform: 'scaleY(0)'
+        }
+        
+      },
     },
     animation: {
       'slide-up-animation': 'slideUp 0.5s ease-out',  
+      'drop-down-animation': 'dropDown 150ms ease-in-out forwards',
+      'retract-animation': 'retract 150ms ease-in-out forwards',
     },
     colors: {
       primary: 'var(--primary)',

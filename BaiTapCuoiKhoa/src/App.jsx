@@ -1,19 +1,10 @@
-import { useEffect, useState, Suspense ,lazy } from "react";
-const Menu = lazy(() => import('./components/Menu'));
-const Gallery = lazy(() => import('./components/Gallery'));
-import image1 from "./assets/Photos/DogEatSausageInSpace.jpg";
-import image2 from "./assets/Photos/Kitchen.jpg";
-import image3 from "./assets/Photos/Lion.jpg";
-import image4 from "./assets/Photos/FamilyVacation.jpg";
-import image5 from "./assets/Photos/Nature.jpg";
-import image6 from "./assets/Photos/Books.jpg";
-import image7 from "./assets/Photos/Dog.jpg";
-import image8 from "./assets/Photos/LightHouse.jpg";
-import image9 from "./assets/Photos/Pizza.jpg";
+import { useEffect, useState, Suspense, lazy } from "react";
 
+const Menu = lazy(() => import("./components/Menu"));
+const Gallery = lazy(() => import("./components/Gallery"));
 function App() {
   const [searchText, setSearchText] = useState("");
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("black");
   const themes = [
     "light",
     "dark",
@@ -22,51 +13,207 @@ function App() {
     "theme5",
     "theme6",
     "theme7",
+    "theme8",
+    "theme9",
+    "theme10",
   ];
   const photos = [
     {
       id: 1,
-      source: image4,
+      source:
+        "https://images.healthshots.com/healthshots/en/uploads/2022/09/07225829/family-vacation-1600x900.jpg",
       title: "Family vacation",
       categories: ["Traveling"],
     },
-    { id: 2, source: image2, title: "My kitchen", categories: ["Food"] },
-    { id: 3, source: image3, title: "Lion king", categories: ["Animal"] },
+    {
+      id: 2,
+      source:
+        "https://hips.hearstapps.com/hmg-prod/images/rheinstein-schafer-newport-beach-house-kitchen-6489d4d251f5d.jpg?crop=1.00xw:0.836xh;0,0&resize=1200:*",
+      title: "My kitchen",
+      categories: ["Food"],
+    },
+    {
+      id: 3,
+      source:
+        "https://cdn.pixabay.com/photo/2022/08/13/09/05/lion-7383228_640.jpg",
+      title: "Lion king",
+      categories: ["Animal"],
+    },
     {
       id: 4,
-      source: image1,
+      source:
+        "https://img.freepik.com/free-photo/3d-rendering-robotic-dog_23-2150780822.jpg",
       title: "AI dog",
-      categories: ["Animal", "Cosmic", "Food"],
+      categories: ["Animal"],
     },
-    { id: 5, source: image5, title: "Nature beauty", categories: ["Nature"] },
-    { id: 6, source: image8, title: "Light house", categories: ["Nature"] },
-    { id: 7, source: image9, title: "Pizza", categories: ["Food"] },
+    {
+      id: 5,
+      source:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUrvE85eW9nMQbakX11jPL2XybGmNTIlhnKw&s",
+      title: "Nature beauty",
+      categories: ["Nature"],
+    },
+    {
+      id: 6,
+      source:
+        "https://i.pinimg.com/originals/33/30/e2/3330e26cfd9d0ecb277639737c62e075.jpg",
+      title: "Light house",
+      categories: ["Nature"],
+    },
+    {
+      id: 7,
+      source:
+        "https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg",
+      title: "Pizza",
+      categories: ["Food"],
+    },
     {
       id: 8,
-      source: image1,
-      title: "AI dog",
-      categories: ["Animal", "Cosmic", "Food"],
+      source:
+        "https://mybackdrop.co.uk/wp-content/uploads/2017/06/space-galaxy.jpg",
+      title: "the universe",
+      categories: ["Cosmic"],
     },
-    { id: 9, source: image6, title: "Just books", categories: ["Study"] },
-    { id: 10, source: image7, title: "Big ear dog", categories: ["Animal"] },
+    {
+      id: 9,
+      source:
+        "https://media.istockphoto.com/id/1181242927/photo/chic-diva-dog-in-autumn-or-fall-windy.jpg?s=612x612&w=0&k=20&c=sSSKZ_5GA5h5shirUxqu_lWQEebAnnVWJhQQA7V11YI=",
+      title: "Slay dog",
+      categories: ["Fashion", "Animal"],
+    },
+    {
+      id: 10,
+      source:
+        "https://static1.squarespace.com/static/56b1148fe707ebac7ac5d685/56b1152ad51cd4a1a6e557cf/6248d249a4c9a44f31a13ccd/1665875165612/studying-ahead-1421056.jpg?format=1500w",
+      title: "Learning",
+      categories: ["Study"],
+    },
     {
       id: 11,
-      source: image4,
+      source:
+        "https://www.wakefit.co/blog/wp-content/uploads/2022/01/Notes-min.jpg",
+      title: "Work and Learn",
+      categories: ["Study"],
+    },
+    {
+      id: 12,
+      source:
+        "https://media.cnn.com/api/v1/images/stellar/prod/210104133055-beginner-gaming-pc.jpg?q=w_1110,c_fill",
+      title: "Gamer",
+      categories: ["Gaming"],
+    },
+    {
+      id: 13,
+      source:
+        "https://assets.publishing.service.gov.uk/media/6448efd1529eda000c3b046d/gaming-pic.jpg",
+      title: "Gaming setup",
+      categories: ["Gaming"],
+    },
+    {
+      id: 14,
+      source:
+        "https://th-thumbnailer.cdn-si-edu.com/vjH0v85nPfP7aewZQ9Mg10uN7Lk=/1072x720/filters:no_upscale():focal(634x383:635x384)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/3d/e0/3de096a2-5f45-45bb-8332-27a70ad02aff/beethoven_portrait.jpg",
+      title: "Bethoven",
+      categories: ["Music"],
+    },
+    {
+      id: 15,
+      source:
+        "https://images.healthshots.com/healthshots/en/uploads/2022/09/07225829/family-vacation-1600x900.jpg",
       title: "Family vacation",
       categories: ["Traveling"],
     },
-    { id: 12, source: image8, title: "Light house", categories: ["Nature"] },
-    { id: 13, source: image5, title: "Nature beauty", categories: ["Nature"] },
-    { id: 14, source: image2, title: "My kitchen", categories: ["Food"] },
-    { id: 15, source: image8, title: "Light house", categories: ["Nature"] },
-    { id: 16, source: image3, title: "Lion king", categories: ["Animal"] },
-    { id: 17, source: image6, title: "Just books", categories: ["Study"] },
-    { id: 18, source: image8, title: "Light house", categories: ["Nature"] },
-    { id: 19, source: image5, title: "Nature beauty", categories: ["Nature"] },
-    { id: 20, source: image2, title: "My kitchen", categories: ["Food"] },
-    { id: 21, source: image8, title: "Light house", categories: ["Nature"] },
-    { id: 22, source: image3, title: "Lion king", categories: ["Animal"] },
-    { id: 23, source: image6, title: "Just books", categories: ["Study"] },
+    {
+      id: 16,
+      source:
+        "https://hips.hearstapps.com/hmg-prod/images/rheinstein-schafer-newport-beach-house-kitchen-6489d4d251f5d.jpg?crop=1.00xw:0.836xh;0,0&resize=1200:*",
+      title: "My kitchen",
+      categories: ["Food"],
+    },
+    {
+      id: 17,
+      source:
+        "https://cdn.pixabay.com/photo/2022/08/13/09/05/lion-7383228_640.jpg",
+      title: "Lion king",
+      categories: ["Animal"],
+    },
+    {
+      id: 18,
+      source:
+        "https://img.freepik.com/free-photo/3d-rendering-robotic-dog_23-2150780822.jpg",
+      title: "AI dog",
+      categories: ["Animal"],
+    },
+    {
+      id: 19,
+      source:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUrvE85eW9nMQbakX11jPL2XybGmNTIlhnKw&s",
+      title: "Nature beauty",
+      categories: ["Nature"],
+    },
+    {
+      id: 20,
+      source:
+        "https://i.pinimg.com/originals/33/30/e2/3330e26cfd9d0ecb277639737c62e075.jpg",
+      title: "Light house",
+      categories: ["Nature"],
+    },
+    {
+      id: 21,
+      source:
+        "https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg",
+      title: "Pizza",
+      categories: ["Food"],
+    },
+    {
+      id: 22,
+      source:
+        "https://mybackdrop.co.uk/wp-content/uploads/2017/06/space-galaxy.jpg",
+      title: "the universe",
+      categories: ["Cosmic"],
+    },
+    {
+      id: 23,
+      source:
+        "https://media.istockphoto.com/id/1181242927/photo/chic-diva-dog-in-autumn-or-fall-windy.jpg?s=612x612&w=0&k=20&c=sSSKZ_5GA5h5shirUxqu_lWQEebAnnVWJhQQA7V11YI=",
+      title: "Slay dog",
+      categories: ["Fashion", "Animal"],
+    },
+    {
+      id: 24,
+      source:
+        "https://static1.squarespace.com/static/56b1148fe707ebac7ac5d685/56b1152ad51cd4a1a6e557cf/6248d249a4c9a44f31a13ccd/1665875165612/studying-ahead-1421056.jpg?format=1500w",
+      title: "Learning",
+      categories: ["Study"],
+    },
+    {
+      id: 25,
+      source:
+        "https://www.wakefit.co/blog/wp-content/uploads/2022/01/Notes-min.jpg",
+      title: "Work and Learn",
+      categories: ["Study"],
+    },
+    {
+      id: 26,
+      source:
+        "https://media.cnn.com/api/v1/images/stellar/prod/210104133055-beginner-gaming-pc.jpg?q=w_1110,c_fill",
+      title: "Gamer",
+      categories: ["Gaming"],
+    },
+    {
+      id: 27,
+      source:
+        "https://assets.publishing.service.gov.uk/media/6448efd1529eda000c3b046d/gaming-pic.jpg",
+      title: "Gaming setup",
+      categories: ["Gaming"],
+    },
+    {
+      id: 28,
+      source:
+        "https://th-thumbnailer.cdn-si-edu.com/vjH0v85nPfP7aewZQ9Mg10uN7Lk=/1072x720/filters:no_upscale():focal(634x383:635x384)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/3d/e0/3de096a2-5f45-45bb-8332-27a70ad02aff/beethoven_portrait.jpg",
+      title: "Bethoven",
+      categories: ["Music"],
+    },
   ];
   const [categories, setCategories] = useState([
     { id: 1, name: "Food", state: false },
@@ -82,10 +229,7 @@ function App() {
     { id: 11, name: "Business", state: false },
   ]);
 
-
-
   useEffect(() => {
-    
     const storedTheme = localStorage.getItem("Theme");
     if (storedTheme !== null) {
       setTheme(storedTheme);
@@ -95,7 +239,6 @@ function App() {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-
 
   const handleCategoryStateChange = (cateIdToChange) => {
     const updatedCategories = categories.map((category) => {
@@ -138,17 +281,17 @@ function App() {
 
   return (
     <Suspense fallback={<></>}>
-    <div className="h-fit gap-4">
-      <Gallery photos={filteredPhotos} />
-      <Menu
-        categories={categories}
-        onCateStateChange={handleCategoryStateChange}
-        onSearching={handleSearching}
-        onThemeChange={handleThemeChanging}
-        themes={themes}
-      />
-    </div>
-  </Suspense>
+      <div className="h-fit gap-4">
+        <Gallery photos={filteredPhotos} />
+        <Menu
+          categories={categories}
+          onCateStateChange={handleCategoryStateChange}
+          onSearching={handleSearching}
+          onThemeChange={handleThemeChanging}
+          themes={themes}
+        />
+      </div>
+    </Suspense>
   );
 }
 

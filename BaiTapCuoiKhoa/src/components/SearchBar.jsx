@@ -12,7 +12,7 @@ const SearchBar = ({ onTextChange, onFocus,isSearching }) => {
   }, [isSearching]);
   return (
     <div
-      className={`bg-secondary-1 flex py-1 px-1 text-accent  gap-x-2 h-fit grow shadow-inner-custom rounded-full items-center justify-start transition ease-in-out duration-300`}
+      className={`bg-primary   flex py-1 px-1 text-accent  gap-x-2 h-fit grow shadow-inner-custom rounded-full items-center justify-start transition ease-in-out duration-300`}
       onClick={() => onFocus(true)}
     >
       <div className="flex items-center justify-center h-7 w-7" >
@@ -27,7 +27,7 @@ const SearchBar = ({ onTextChange, onFocus,isSearching }) => {
         ref={inputRef}
         className={`${
           isSearching ? "block" : "hidden"
-        } sm:block bg-transparent rent h-fit placeholder:text-accent  focus:outline-none w-full text-xl placeholder:italic placeholder:select-none placeholder:text-base`}
+        } sm:block bg-transparent h-fit placeholder:text-accent  focus:outline-none w-full text-xl placeholder:italic placeholder:select-none placeholder:text-base`}
         placeholder="Search photo title..."
         type="text"
         spellCheck='false'
