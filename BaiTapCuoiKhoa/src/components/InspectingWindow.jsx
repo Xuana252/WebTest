@@ -37,9 +37,9 @@ const InspectingWindow = ({ photo }) => {
         <img src={photo.source} alt="displaying photo" className="w-full " />
       </div>
 
-      <div className="size-full p-4 flex flex-col gap-4">
-        <div className="size-full">
-          <div className="flex-row-reverse p-2 h-fit flex sticky top-[110px] z-auto gap-2 bg-secondary-1">
+      <div className="size-full p-4 flex flex-col gap-0">
+        <div className="size-fit grow">
+          <div className="flex-row-reverse p-2 h-fit flex sticky top-[110px] z-1 gap-2 bg-secondary-1">
             <button
               data-tooltip-id="Download"
               data-tooltip-content={"Download"}
@@ -61,26 +61,28 @@ const InspectingWindow = ({ photo }) => {
             </button>
             <Tooltip id="Share" className="tooltip" classNameArrow="hidden" />
           </div>
-          <h1 className="text-3xl font-bold">{photo.title}</h1>
-          <h2 className="text-2xl">{photo.categories.toString()}</h2>
-          <p className="text-xl overflow-y-scroll no-scrollbar h-[200px] text-justify pr-3">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque,
-            distinctio minima. Quo, numquam iusto! Consequatur sed, ratione quasi
-            enim possimus aliquam repellendus, facilis quidem fugiat distinctio
-            nobis. <br /> Culpa, voluptates explicabo?Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Ratione, voluptate harum, soluta
-            similique fuga corporis natus distinctio atque quia asperiores numquam
-            minima labore eius? Adipisci consequuntur vel temporibus iste
-            aspernatur?
-          </p>
+          <div className="grow flex-col flex gap-2">
+            <h1 className="text-3xl font-bold">{photo.title}</h1>
+            <h2 className="text-2xl">{photo.categories.toString()}</h2>
+            <p className="text-xl overflow-y-scroll no-scrollbar text-justify pr-3">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque,
+              distinctio minima. Quo, numquam iusto! Consequatur sed, ratione quasi
+              enim possimus aliquam repellendus, facilis quidem fugiat distinctio
+              nobis. <br /> Culpa, voluptates explicabo?Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Ratione, voluptate harum, soluta
+              similique fuga corporis natus distinctio atque quia asperiores numquam
+              minima labore eius? Adipisci consequuntur vel temporibus iste
+              aspernatur?
+            </p>
+          </div>
         </div>
-        <div className="mt-auto flex flex-row items-center justify-between  w-full h-fit gap-2">
+        <div className="bg-secondary-1 py-2 sticky z-1 bottom-0 flex flex-row items-center justify-between  w-full h-fit gap-2">
           <button className="bg-secondary-2 rounded-full size-11">
             <FontAwesomeIcon icon={faUser} size="xl" />
           </button>
           <input
-            className={`bg-transparent border-accent border-2 px-2 grow  h-full flex rounded-full p-0 placeholder:text-accent  focus:outline-none text-xl  placeholder:italic placeholder:select-none placeholder:text-base`}
-            placeholder="Make a commet..."
+            className={`bg-transparent border-accent border-2 px-3 w-[20px] grow  h-full flex rounded-full p-0 placeholder:text-accent  focus:outline-none text-xl  placeholder:italic placeholder:select-none placeholder:text-base`}
+            placeholder="Make a comment..."
             type="text"
             spellCheck="false"
           />

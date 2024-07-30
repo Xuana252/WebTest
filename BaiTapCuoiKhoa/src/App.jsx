@@ -42,9 +42,9 @@ function App() {
     {
       id: 4,
       source:
-        "https://img.freepik.com/free-photo/3d-rendering-robotic-dog_23-2150780822.jpg",
-      title: "AI dog",
-      categories: ["Animal"],
+      "https://www.kenduncan.com/wp-content/uploads/1970/01/VX1182.jpg",
+    title: "Light House",
+    categories: ["Nature"],
     },
     {
       id: 5,
@@ -125,10 +125,9 @@ function App() {
     },
     {
       id: 16,
-      source:
-        "https://hips.hearstapps.com/hmg-prod/images/rheinstein-schafer-newport-beach-house-kitchen-6489d4d251f5d.jpg?crop=1.00xw:0.836xh;0,0&resize=1200:*",
-      title: "My kitchen",
-      categories: ["Food"],
+      source: "https://www.kenduncan.com/wp-content/uploads/1970/01/VX1182.jpg",
+      title: "Light House",
+      categories: ["Nature"],
     },
     {
       id: 17,
